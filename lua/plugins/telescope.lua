@@ -6,15 +6,10 @@ return {
 		-- optional but recommended
 		{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
 	},
-
-	config = function()
-		require('telescope').setup({})
-		local builtin = require('telescope.builtin')
-
-		vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
-		vim.keymap.set('n', '<C-p>', builtin.git_files, {})
-		vim.keymap.set('n', '<leader>ps', function ()
-			builtin.grep_string({ search = vim.fn.input("Grep > ") })
-		end)
-	end
+	opts = {},
+	keys = {
+		{ '<leader>pf', require('telescope.builtin').find_files, desc = "Find files" },
+		{ '<leader>ps', require('telescope.builtin').grep_string, desc = "Grep string" },
+		{ '<C-p>', require('telescope.builtin').git_files, desc = "Git files" }
+	}
 }
