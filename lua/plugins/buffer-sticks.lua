@@ -11,5 +11,6 @@ return {
 				move_down = "j"
 			}
 		}
-	}
+	},
+	lazy = false
 }
