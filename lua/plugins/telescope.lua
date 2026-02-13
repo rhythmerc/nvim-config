@@ -8,8 +8,8 @@ return {
 	},
 	opts = {},
 	keys = {
-		{ '<leader>pf', require('telescope.builtin').find_files, desc = "Find files" },
-		{ '<leader>ps', require('telescope.builtin').grep_string, desc = "Grep string" },
-		{ '<C-p>', require('telescope.builtin').git_files, desc = "Git files" }
+		{ '<leader>pf', function() require('telescope.builtin').find_files() end, desc = "Find files" },
+		{ '<leader>ps', function() require('telescope.builtin').live_grep() end, desc = "Live grep" },
+		{ '<C-p>', function() require('telescope.builtin').git_files() end, desc = "Git files" }
 	}
 }
