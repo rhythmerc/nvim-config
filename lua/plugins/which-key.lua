@@ -6,6 +6,7 @@ return {
 		spec = {
 			{ "<leader>b", group = "Buffer management" },
 			{ "<leader>p", group = "Project navigation" },
+			{ "<leader>m", group = "Markdown preview management" },
 		}
 	}
 }

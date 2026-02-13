@@ -1,3 +1,5 @@
 return {
-	'https://github.com/neovim/nvim-lspconfig'
+	'https://github.com/neovim/nvim-lspconfig',
+	config = function()
+	end
 }
